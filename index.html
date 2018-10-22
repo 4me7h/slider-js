@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Slider JS</title>
+    </head>
+    <body>
+
+        <img name="slider" width="500px">
+
+        <script>
+            window.addEventListener('load', function() {
+                console.log('el contenido está cargado');
+                
+                let images = [];
+                let imagesIndex = 0;
+                let time = 1000;
+
+                images[0] = 'images/img01.jpg';
+                images[1] = 'images/img02.jpg';
+                images[2] = 'images/img03.jpg';
+      
+                function changeImages() {
+                    document.slider.src = images[imagesIndex];
+
+                    if(imagesIndex < images.length - 1) {
+                        imagesIndex++;
+                    } else imagesIndex = 0;
+                }
+
+                setInterval(changeImages, time);
+            });
+        </script>
+    </body>
+</html>
