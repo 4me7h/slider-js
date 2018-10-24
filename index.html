@@ -20,7 +20,7 @@
                 images[1] = 'images/img02.jpg';
                 images[2] = 'images/img03.jpg';
       
-                function changeImages() {
+                const changeImages = () => {
                     document.slider.src = images[imagesIndex];
 
                     if(imagesIndex < images.length - 1) {
